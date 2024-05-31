@@ -5,16 +5,17 @@ import { Menu } from '../../models/menu.class';
   providedIn: 'root',
 })
 export class CartService {
-  private items: Menu[] = [];
+  items: Menu[] = [];
 
   constructor() {}
 
-  addToCart(product: any) {
-    let item = this.items.find((i) => i.id === product.id);
+  addToCart(currentMenu: Menu) {
+    let item = this.items.find((i) => i.id === currentMenu.id);
     if (item) {
       item.quantity++;
     } else {
-      this.items.push({ ...product, quantity: 1 });
+      this.items.push(currentMenu);
+      console.log(currentMenu);
     }
   }
 
@@ -26,13 +27,14 @@ export class CartService {
     this.items = this.items.filter((i) => i.id !== item.id);
   }
 
-  incrementQuantity(id: string) {
+  addQuantity(id: string) {
     let item: any = this.items.find((i) => i.id === id);
     if (item) {
       item.quantity++;
     }
   }
-  decrementQuantity(id: string) {
+
+  removeQuantity(id: string) {
     let item = this.items.find((i) => i.id === id);
     if (item) {
       item.quantity--;
@@ -41,6 +43,7 @@ export class CartService {
       }
     }
   }
+
   getTotal() {
     return this.items
       .reduce((acc, item) => {

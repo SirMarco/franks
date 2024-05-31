@@ -2,7 +2,7 @@
   <div class="cardFoodMenu">
     <h3>{{menu.name}}</h3>
     <p class="cardFoodMenuDetails" id="">{{menu.description}}</p>
-    <p class="cardFoodMenuPrice">{{menu.price}} CHF</p>
+    <p class="cardFoodMenuPrice">{{ menu.price.toFixed(2) }} CHF</p>
   </div>
   <div class="cardFoodMenuRight">
     <img class="cardFoodPicture" src="assets/images/menu/{{menu.picture}}" alt="">

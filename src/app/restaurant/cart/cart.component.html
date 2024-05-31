@@ -4,12 +4,12 @@
     <p>{{item.quantity}} x</p>
     <h3>{{item.name}}</h3>
   </div>
-  <p>{{item.price}} CHF</p>
+  <p>{{item.price.toFixed(2)}} CHF</p>
 </div>
 <div class="basketButtonWrapper">
   <!-- <button (click)="deleteFromCart(item)">Delete</button> -->
-  <div (click)="cartService.incrementQuantity(item.id)" class="basketButton"><mat-icon fontIcon="add"></mat-icon></div>
-  <div (click)="cartService.decrementQuantity(item.id)" class="basketButton"><mat-icon fontIcon="remove"></mat-icon>
+  <div (click)="cartService.addQuantity(item.id)" class="basketButton"><mat-icon fontIcon="add"></mat-icon></div>
+  <div (click)="cartService.removeQuantity(item.id)" class="basketButton"><mat-icon fontIcon="remove"></mat-icon>
   </div>
 </div>
 <div class="line"></div>

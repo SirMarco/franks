@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MenuListComponent {
   menuList: Menu[] = [];
-  categoryList: string[] = ['starters', 'hotdogs', 'burger', 'sides', 'drinks'];
+  categoryList: string[] = ['Starters', 'HotDogs', 'Burger', 'Sides', 'Drinks'];
   unsubMenuList;
 
   constructor(private firebase: FirebaseService) {
