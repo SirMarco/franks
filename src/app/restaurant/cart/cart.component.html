@@ -1,0 +1,17 @@
+@for (item of cartService.getItems(); track item.id) {
+<div class="basket-row">
+  <div>
+    <p>{{item.quantity}} x</p>
+    <h3>{{item.name}}</h3>
+  </div>
+  <p>{{item.price}} CHF</p>
+</div>
+<div class="basketButtonWrapper">
+  <!-- <button (click)="deleteFromCart(item)">Delete</button> -->
+  <div (click)="cartService.incrementQuantity(item.id)" class="basketButton"><mat-icon fontIcon="add"></mat-icon></div>
+  <div (click)="cartService.decrementQuantity(item.id)" class="basketButton"><mat-icon fontIcon="remove"></mat-icon>
+  </div>
+</div>
+<div class="line"></div>
+}
+<h3>Total: {{cartService.getTotal()}} CHF</h3>

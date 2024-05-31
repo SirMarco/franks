@@ -1,0 +1,11 @@
+<div class="cardFood">
+  <div class="cardFoodMenu">
+    <h3>{{menu.name}}</h3>
+    <p class="cardFoodMenuDetails" id="">{{menu.description}}</p>
+    <p class="cardFoodMenuPrice">{{menu.price}} CHF</p>
+  </div>
+  <div class="cardFoodMenuRight">
+    <img class="cardFoodPicture" src="assets/images/menu/{{menu.picture}}" alt="">
+  </div>
+  <div class="cardFoodAdd" (click)="cartService.addToCart(menu)"><mat-icon fontIcon="add"></mat-icon></div>
+</div>

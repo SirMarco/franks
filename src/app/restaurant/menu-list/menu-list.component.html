@@ -1,0 +1,23 @@
+<section>
+  <h3 id="{{categoryList[0]}}">{{categoryList[0]}}</h3>
+  <ng-container *ngFor="let singlemenu of menuList">
+    <app-menu-single *ngIf="singlemenu.category.includes('starters')" [menu]="singlemenu"></app-menu-single>
+  </ng-container>
+  <h3 id="{{categoryList[1]}}">{{categoryList[1]}}</h3>
+  <ng-container *ngFor="let singlemenu of menuList">
+    <app-menu-single *ngIf="singlemenu.category.includes('hotdogs')" [menu]="singlemenu"></app-menu-single>
+  </ng-container>
+  <h3 id="{{categoryList[2]}}">{{categoryList[2]}}</h3>
+  <ng-container *ngFor="let singlemenu of menuList">
+    <app-menu-single *ngIf="singlemenu.category.includes('burger')" [menu]="singlemenu"></app-menu-single>
+  </ng-container>
+  <h3 id="{{categoryList[3]}}">{{categoryList[3]}}</h3>
+  <ng-container *ngFor="let singlemenu of menuList">
+    <app-menu-single *ngIf="singlemenu.category.includes('sides')" [menu]="singlemenu"></app-menu-single>
+  </ng-container>
+  <h3 id="{{categoryList[4]}}">{{categoryList[4]}}</h3>
+  <ng-container *ngFor="let singlemenu of menuList">
+    <app-menu-single *ngIf="singlemenu.category.includes('drinks')" [menu]="singlemenu"></app-menu-single>
+  </ng-container>
+
+</section>

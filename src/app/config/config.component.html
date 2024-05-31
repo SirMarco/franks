@@ -1,1 +1,18 @@
-<p>config works!</p>
+<div class="container">
+  <h1> Add new Menu </h1>
+  <form (ngSubmit)="saveMenu()">
+    <p> Category </p>
+    <mat-select name="category" [(ngModel)]="menu.category">
+      <mat-option *ngFor="let category of categorys" [value]="category">{{category}}</mat-option>
+    </mat-select>
+    <p> Name </p>
+    <input name="name" [(ngModel)]="menu.name">
+    <p> Description </p>
+    <input name="name" [(ngModel)]="menu.description">
+    <p> Price </p>
+    <input name="name" [(ngModel)]="menu.price">
+    <p> Picture </p>
+    <input name="name" [(ngModel)]="menu.picture">
+    <button type="submit"> submit </button>
+  </form>
+</div>

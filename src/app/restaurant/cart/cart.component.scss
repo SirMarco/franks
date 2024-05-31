@@ -1,0 +1,42 @@
+.basket-row {
+  display: flex;
+  justify-content: space-between;
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 4px;
+  }
+  > p {
+    align-items: center;
+  }
+}
+
+.basketButtonWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.basketButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: end;
+  color: white;
+  background-color: lightgrey;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #555;
+  }
+}
+
+.line {
+  border: 1px solid lightgrey;
+  width: 100%;
+  margin-top: 16px;
+}

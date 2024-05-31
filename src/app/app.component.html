@@ -1,20 +1,19 @@
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side" position="end" opened="true">
-
     <div class="sidenavWrapper">
-      <div>
+      <div class="cart">
         <p>Warenkorb</p>
+        <app-cart></app-cart>
       </div>
       <div routerLink="/config" routerLinkActive="active">
         <button mat-icon-button color="primary">
           <mat-icon fontIcon="dashboard"></mat-icon>
         </button><span>Config</span>
       </div>
-
     </div>
   </mat-drawer>
   <mat-toolbar color="primary" class="">
-    <mat-toolbar-row>
+    <mat-toolbar-row class="toolbar">
       <img src="../assets/images/logo_black.png" routerLink="/" routerLinkActive="active">
       <span class="example-spacer"></span>
       <button mat-icon-button color="primary" (click)="drawer.toggle()">
